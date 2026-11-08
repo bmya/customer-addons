@@ -7,8 +7,8 @@ personas de BMyA que revisan sus PRs ([01](01-puesta-en-marcha.md)). Nadie de
 BMyA necesita permiso de escritura.
 
 **¿Nosotros necesitamos acceso a algo de BMyA?**
-No. Ni a servidores, ni a repositorios. Todo pasa por su repositorio y por el
-portal de tickets.
+No. Ni a servidores, ni a repositorios. Todo pasa por su repositorio y por su
+panel de cliente (<https://www.bmya.cl/my/customerpanel>).
 
 **¿Podemos cambiar las revisiones o su configuración?**
 No. Las corre BMyA con su configuración, igual para todos los clientes. Un
@@ -16,7 +16,8 @@ archivo de configuración de herramientas en su repositorio hace fallar
 `ci/policy` ([P3](03-reglas-de-codigo.md#p3)).
 
 **Una revisión quedó en amarillo mucho tiempo.**
-Comenten `@robbmya recheck`. Si sigue igual, avísennos por ticket.
+Comenten `@robbmya recheck`. Si sigue igual, avísennos desde su panel de
+cliente («Soporte de mis módulos»).
 
 **`@robbmya s+` no hizo nada.**
 El bot siempre responde. Si no hubo respuesta: revisen que la App siga
@@ -25,16 +26,23 @@ Si dice que faltan revisiones en verde, es que alguna está en rojo o todavía
 corriendo.
 
 **Necesitamos una biblioteca de Python que no está en la lista.**
-Pídanla por ticket antes del PR. Si se acepta, entra a la lista para todos.
+Pídanla desde su panel de cliente antes del PR. Si se acepta, entra a la lista
+para todos.
 
 **Necesitamos un módulo de Odoo o de BMyA que nuestro Odoo no tiene.**
-Por ticket, antes del PR. Lo agregamos a su instalación y después la
+Desde su panel de cliente, antes del PR. Lo agregamos a su instalación y
+después la
 dependencia pasa ([P5](03-reglas-de-codigo.md#p5)).
 
 **Necesitamos SQL para un reporte pesado.**
 Usen `read_group` / `_read_group` del ORM, que agrupa en la base. Si no alcanza,
-pídanlo por ticket: lo evaluamos como cambio de la regla
+pídanlo desde su panel de cliente: lo evaluamos como cambio de la regla
 ([S5](03-reglas-de-codigo.md#s5)).
+
+**¿BMyA soporta nuestros módulos?**
+Solo si contratan el soporte de sus módulos, que es opcional. Las revisiones y
+la aprobación de BMyA corren igual, tengan o no soporte. Ver
+[Soporte de sus módulos](../README.md#soporte-de-sus-módulos).
 
 **¿Por qué no podemos leer archivos del servidor?**
 Su código corre en el mismo servidor que el de Odoo y el de BMyA. Los archivos
