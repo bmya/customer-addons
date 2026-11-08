@@ -194,6 +194,12 @@ Cada módulo tiene `tests/__init__.py` que importa al menos un archivo con una
 clase de test (`TransactionCase` o `HttpCase`). Ver
 [04](04-tests-y-cobertura.md).
 
+<a id="p9"></a>
+### P9 · Clave de manifiesto no permitida
+
+El manifiesto no puede declarar `cloc_exclude`. El resto de las claves
+estándar de Odoo se pueden usar, con las reglas de [02](02-estructura-del-repositorio.md).
+
 ---
 
 ## Lo que revisa una persona de BMyA antes de aprobar

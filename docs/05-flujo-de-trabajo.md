@@ -69,8 +69,8 @@ su lado.
 
 Cuando el cambio esté probado:
 
-1. Pidan la revisión de BMyA por ticket (<https://www.bmya.cl/my/tickets>), con
-   el enlace al PR.
+1. Pidan la revisión de BMyA desde su panel de cliente (<https://www.bmya.cl/my/customerpanel>, sección «Desarrollo propio»),
+   con el botón «Pedir revisión para producción» y el enlace al PR.
 2. Revisamos el código y los tests (ver el final de [03](03-reglas-de-codigo.md)).
    Si hay que cambiar algo, lo comentamos en el PR.
 3. Si está bien, una persona de BMyA comenta `@robbmya r+`. El bot
@@ -90,7 +90,8 @@ la rama ([01](01-puesta-en-marcha.md#4-la-rama)).
 
 ## 6. Si algo sale mal en producción
 
-Avísennos por ticket. El paso a producción guarda el estado anterior: si la
+Avísennos desde su panel de cliente (<https://www.bmya.cl/my/customerpanel>, sección «Desarrollo propio»), con «Soporte de mis
+módulos». El paso a producción guarda el estado anterior: si la
 actualización falla, su Odoo sigue con la versión anterior y el bot lo comenta
 en el PR.
 
