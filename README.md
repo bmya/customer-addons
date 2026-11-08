@@ -20,8 +20,8 @@ Siempre el mismo, sin atajos:
 3. **Pruebas en un Odoo efímero** (runbot) con sus módulos instalados: los
    tests tienen que pasar, con la cobertura mínima.
 4. Lo suben a **su ambiente de test** cuando quieran (`@robbmya s+ <cliente>`).
-5. **Revisión de BMyA**, y si se aprueba, pasa a **producción** en la ventana
-   de mantenimiento.
+5. Piden la **revisión de BMyA** desde su panel de cliente, y si se aprueba,
+   pasa a **producción** en la ventana de mantenimiento.
 
 Las revisiones las corre BMyA, no su repositorio: nada que se cambie en este
 repo las salta o las modifica. Ver [docs/05-flujo-de-trabajo.md](docs/05-flujo-de-trabajo.md).
@@ -47,7 +47,7 @@ qué hay que ajustar para cumplir las reglas.
 
 | | |
 |---|---|
-| [01 · Puesta en marcha](docs/01-puesta-en-marcha.md) | Alta, ramas, instalar la App de BMyA |
+| [01 · Puesta en marcha](docs/01-puesta-en-marcha.md) | Alta desde su panel de cliente, la rama, instalar la App de BMyA |
 | [02 · Estructura del repositorio](docs/02-estructura-del-repositorio.md) | Cómo se organiza un módulo, nombres, versiones, dependencias |
 | [03 · Reglas de código](docs/03-reglas-de-codigo.md) | Qué se puede usar y qué no, con el código de cada regla |
 | [04 · Tests y cobertura](docs/04-tests-y-cobertura.md) | Cómo escribir los tests y cuánta cobertura se exige |
@@ -82,8 +82,8 @@ Las atiende el equipo técnico de BMyA, no la mesa de ayuda general.
 ## Sin excepciones
 
 Las reglas valen igual para todos los clientes, y **nadie de BMyA puede
-saltarlas** para un PR. Si una regla les bloquea algo legítimo, pídanlo por
-ticket: se evalúa como un cambio de la regla para todos.
+saltarlas** para un PR. Si una regla les bloquea algo legítimo, pídanlo
+desde «Soporte de mis módulos», en su [panel de cliente](https://www.bmya.cl/my/customerpanel): se evalúa como un cambio de la regla para todos.
 
 ## Licencia
 

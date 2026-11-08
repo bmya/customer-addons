@@ -12,7 +12,7 @@ lleva a su sección acá. Las mismas reglas las corre `tools/bmya_check.py` en s
 máquina ([07](07-trabajar-en-su-maquina.md)).
 
 **No hay excepciones por PR.** Si una regla les impide algo legítimo, pídanlo
-por ticket: si se acepta, cambia la regla para todos los clientes.
+desde «Soporte de mis módulos», en su [panel de cliente](https://www.bmya.cl/my/customerpanel): si se acepta, cambia la regla para todos los clientes.
 
 ---
 
@@ -171,7 +171,8 @@ Un `.gitmodules` en el repositorio.
 ### P5 · Dependencia de un módulo que no está en el proyecto
 
 Un módulo en `depends` que su Odoo no tiene y que tampoco está en este
-repositorio. Pidan por ticket que se agregue a su Odoo antes del PR. La revisa
+repositorio. Pidan que se agregue a su Odoo antes del PR, desde «Soporte de mis
+módulos», en su [panel de cliente](https://www.bmya.cl/my/customerpanel). La revisa
 solo el CI de BMyA: su máquina no sabe qué módulos tiene su Odoo.
 
 <a id="p6"></a>
