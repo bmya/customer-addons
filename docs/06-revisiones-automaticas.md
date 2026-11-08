@@ -27,11 +27,11 @@ No hay forma de forzar una revisión en rojo en un repositorio de cliente.
 
 ## Si una revisión queda en amarillo mucho tiempo
 
-Comenten `@robbmya recheck`. Si sigue igual, avísennos por ticket con el enlace
-al PR.
+Comenten `@robbmya recheck`. Si sigue igual, avísennos desde «Soporte de mis módulos», en su [panel de cliente](https://www.bmya.cl/my/customerpanel),
+con el enlace al PR.
 
 ## Si creen que una revisión se equivoca
 
-Puede pasar, sobre todo con las reglas S, que son estrictas a propósito. Abran
-un ticket con el enlace al PR y la línea. Si es un error de la regla, la
+Puede pasar, sobre todo con las reglas S, que son estrictas a propósito.
+Avísennos desde «Soporte de mis módulos», en su [panel de cliente](https://www.bmya.cl/my/customerpanel), con el enlace al PR y la línea. Si es un error de la regla, la
 corregimos para todos; mientras tanto, el PR no se puede forzar.

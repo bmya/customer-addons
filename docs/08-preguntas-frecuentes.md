@@ -2,13 +2,21 @@
 
 **¿Tenemos que darle a BMyA acceso a nuestro repositorio?**
 A la App **app-bot-bmya**, solo para ese repositorio: pueden quitársela cuando
-quieran. Si el repositorio es privado, además invitan con permiso **Read** a las
-personas de BMyA que revisan sus PRs ([01](01-puesta-en-marcha.md)). Nadie de
+quieran. Si el repositorio es privado, además invitan con permiso **Read** a los
+revisores de BMyA que muestra su panel ([01](01-puesta-en-marcha.md)). Nadie de
 BMyA necesita permiso de escritura.
 
 **¿Nosotros necesitamos acceso a algo de BMyA?**
 No. Ni a servidores, ni a repositorios. Todo pasa por su repositorio y por su
 panel de cliente (<https://www.bmya.cl/my/customerpanel>).
+
+**No vemos la sección «Desarrollo propio» en el panel.**
+Aparece para las empresas que tienen su Odoo con BMyA. Si la tienen y no la
+ven, avísennos por ticket.
+
+**Vemos la sección, pero no el formulario para pedir el alta.**
+El alta y la revisión para producción las pide una persona facultada de su
+empresa. Pídanle a ella que lo haga.
 
 **¿Podemos cambiar las revisiones o su configuración?**
 No. Las corre BMyA con su configuración, igual para todos los clientes. Un

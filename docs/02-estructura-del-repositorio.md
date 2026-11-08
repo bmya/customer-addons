@@ -55,7 +55,8 @@ Un diccionario literal, sin código:
   no se actualiza en su base.
 - **`depends`:** solo módulos que ya están en su Odoo (estándar, Enterprise o de
   BMyA) o en este mismo repositorio (regla [P5](03-reglas-de-codigo.md#p5)). Si
-  necesitan uno que su Odoo no tiene, pídanlo por ticket **antes** del PR.
+  necesitan uno que su Odoo no tiene, pídanlo desde «Soporte de mis módulos», en su [panel de cliente](https://www.bmya.cl/my/customerpanel)
+  **antes** del PR.
 - **`external_dependencies`:** solo las bibliotecas Python de la lista
   permitida (regla [P6](03-reglas-de-codigo.md#p6)). Nada de `bin`.
 - **`data`, `demo`, `assets`:** rutas dentro del propio módulo, nunca de otro ni

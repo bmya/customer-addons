@@ -50,7 +50,7 @@ en el repositorio puede subir el PR a su ambiente de test, comentando en el PR:
 @robbmya s+ <cliente>
 ```
 
-(`<cliente>` es el nombre que les dimos en el alta). El bot lo sube, actualiza
+(el comando exacto, con su `<cliente>`, está en su panel). El bot lo sube, actualiza
 los módulos en su base de test y comenta el resultado en el PR. No hace falta
 ninguna otra rama ni otro PR: la combinación que va a su test la arma BMyA por
 su lado.
@@ -69,8 +69,11 @@ su lado.
 
 Cuando el cambio esté probado:
 
-1. Pidan la revisión de BMyA desde su panel de cliente (<https://www.bmya.cl/my/customerpanel>, sección «Desarrollo propio»),
-   con el botón «Pedir revisión para producción» y el enlace al PR.
+1. Pidan la revisión de BMyA en su panel de cliente
+   (<https://www.bmya.cl/my/customerpanel>, sección «Desarrollo propio»), con
+   **«Pedir revisión para producción»**: el enlace al PR, que tiene que ser de
+   su repositorio, y un comentario si hace falta. Lo pide una persona
+   facultada de su empresa, con el repositorio en estado **Activo**.
 2. Revisamos el código y los tests (ver el final de [03](03-reglas-de-codigo.md)).
    Si hay que cambiar algo, lo comentamos en el PR.
 3. Si está bien, una persona de BMyA comenta `@robbmya r+`. El bot
@@ -128,4 +131,4 @@ Se comentan en el PR. La mención `@robbmya` es obligatoria.
 Las reglas y las revisiones valen igual para todos los clientes. **Nadie de
 BMyA puede saltarlas para un PR**: no existe forma de forzar una revisión en
 rojo en un repositorio de cliente. Si una regla les bloquea algo legítimo,
-pídanlo por ticket: se evalúa como un cambio de la regla para todos.
+pídanlo desde «Soporte de mis módulos», en su [panel de cliente](https://www.bmya.cl/my/customerpanel): se evalúa como un cambio de la regla para todos.
