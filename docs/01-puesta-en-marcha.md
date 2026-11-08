@@ -15,25 +15,39 @@ revisiones de BMyA.
 
 ## 2. Pedir el alta
 
-Abran un ticket en el portal de BMyA (<https://www.bmya.cl/my/tickets>) con:
+Se pide en su panel de cliente: <https://www.bmya.cl/my/customerpanel>, sección
+**«Desarrollo propio»**. Escriban el nombre completo del repositorio
+(`organizacion/repositorio` o `usuario/repositorio`) y, si su empresa tiene más
+de un Odoo con BMyA, elijan para cuál es.
 
-- el nombre completo del repositorio: `organizacion/repositorio`
-  (o `usuario/repositorio`);
-- para qué Odoo es (el nombre de su empresa alcanza: nosotros sabemos qué
-  versión usa).
+El alta la pide una **persona facultada** de su empresa. A quien no lo está, el
+panel le muestra la sección pero no el formulario.
 
-En la respuesta les confirmamos:
+En el panel van viendo el estado:
 
-- **la versión de Odoo** de su instalación (por ejemplo, `18.0`);
-- **el nombre de su cliente** para el comando de pruebas (`@robbmya s+ <cliente>`).
+| Estado | Qué significa |
+|---|---|
+| Solicitado | BMyA todavía no lo revisó |
+| En habilitación | BMyA lo aprobó y lo está habilitando |
+| Activo | Las revisiones ya corren en sus PRs |
+| Rechazado | No se pudo aprobar. El panel dice por qué, y pueden pedirlo de nuevo |
 
-Hasta que el alta esté hecha, las revisiones no corren: un repositorio que BMyA
-no dio de alta no recibe nada, aunque tenga la App instalada.
+Desde que piden el alta, el panel les muestra todo lo que necesitan para los
+pasos siguientes:
+
+- **la versión de Odoo y el nombre de la rama** (por ejemplo, `18.0`);
+- **el comando para probar en su test**, ya armado (`@robbmya s+ <cliente>`);
+- **el enlace para instalar la App** de BMyA;
+- **los revisores de BMyA** a invitar, si el repositorio es privado.
+
+Hasta que el estado sea **Activo** las revisiones no corren: un repositorio que
+BMyA no habilitó no recibe nada, aunque tenga la App instalada.
 
 ## 3. Instalar la App de BMyA
 
-Instalen la App **app-bot-bmya** en el repositorio, y solo en ese:
-<https://github.com/apps/app-bot-bmya> → **Install** → **Only select repositories**.
+Instalen la App **app-bot-bmya** en el repositorio, y solo en ese, con el
+enlace del panel (o desde <https://github.com/apps/app-bot-bmya>) →
+**Install** → **Only select repositories**.
 
 La App es la que le permite a BMyA ver los PRs, publicar el resultado de las
 revisiones y, cuando se aprueba un cambio, incorporarlo a su rama. Solo tiene
@@ -78,8 +92,8 @@ frena hasta que lo deshagan ([05](05-flujo-de-trabajo.md#5-producción)).
 
 ## 5. Revisores de BMyA (solo si el repositorio es privado)
 
-Para revisar sus PRs, las personas de BMyA que les indicamos en el ticket tienen
-que poder verlos. Invítenlas como colaboradoras con permiso **Read**:
+Para revisar sus PRs, los revisores de BMyA que muestra su panel tienen que
+poder verlos. Invítenlas como colaboradoras con permiso **Read**:
 *Settings → Collaborators → Add people*. Con eso pueden leer el código y comentar,
 pero no escribir en el repositorio. Si el repositorio es público, no hace falta.
 
@@ -90,7 +104,10 @@ personas con **permiso de escritura** en él. Para sumar o quitar a alguien,
 denle o quítenle ese permiso en *Settings → Collaborators*. No hace falta
 avisarnos.
 
-La aprobación para producción la da siempre una persona de BMyA.
+Dos cosas no dependen de GitHub sino de su panel de cliente, y las hace una
+persona facultada de su empresa: **pedir el alta** del repositorio y **pedir la
+revisión para producción**. La aprobación para producción la da siempre una
+persona de BMyA.
 
 ## 7. Primer PR
 
