@@ -62,6 +62,23 @@ Hay una rama por versión de Odoo: `17.0`, `18.0`, `19.0` y `20.0`. Cada una
 trae el módulo de ejemplo escrito para esa versión. Usen la de su Odoo y
 borren las demás (ver la puesta en marcha).
 
+## Soporte de sus módulos
+
+Las revisiones automáticas, el runbot y la aprobación de BMyA (`r+`) son
+**obligatorias** para todo lo que llega a su Odoo, tengan o no soporte
+contratado.
+
+**El soporte de sus módulos es aparte y opcional.** Si lo contratan, BMyA los
+mantiene y corrige sus fallas. La tarifa depende del tamaño de sus módulos, que
+BMyA mide periódicamente; la medición vigente está en su panel de cliente, y el
+contrato se readecúa con fecha de corte.
+
+Sin soporte contratado, BMyA no corrige ni mantiene esos módulos: atender una
+falla que causen se cobra como horas de soporte.
+
+Las revisiones, consultas y fallas de sus módulos se piden desde su panel de cliente (<https://www.bmya.cl/my/customerpanel>, sección «Desarrollo propio»).
+Las atiende el equipo técnico de BMyA, no la mesa de ayuda general.
+
 ## Sin excepciones
 
 Las reglas valen igual para todos los clientes, y **nadie de BMyA puede

@@ -34,7 +34,7 @@ import os
 import re
 from dataclasses import dataclass
 
-POLICY_VERSION = "1"
+POLICY_VERSION = "2"
 
 # Cobertura mínima de tests por módulo tocado (runbot/coverage). Una sola para
 # todos los clientes: no hay umbral por cliente que se pueda pedir bajar.
@@ -227,6 +227,7 @@ RULES = {
     "P6": "dependencia Python o de sistema no permitida",
     "P7": "nombre de módulo que ya usa Odoo o BMyA",
     "P8": "módulo sin tests",
+    "P9": "clave de manifiesto no permitida",
 }
 
 
@@ -375,6 +376,12 @@ def _paths_in_assets(assets) -> list[str]:
     return out
 
 
+# Claves del manifiesto que un repo de cliente no puede declarar. `cloc_exclude`
+# saca archivos de la medición de líneas con que se cotiza el soporte de sus
+# módulos (`odoo-bin cloc`): declararla achicaría la medición a voluntad.
+FORBIDDEN_MANIFEST_KEYS = frozenset({"cloc_exclude"})
+
+
 def check_manifest(source: str, rel: str, module: str) -> tuple[list[Violation], dict]:
     try:
         data = ast.literal_eval(source)
@@ -393,6 +400,9 @@ def check_manifest(source: str, rel: str, module: str) -> tuple[list[Violation],
             out.append(Violation("S9", rel, 0, f"assets remoto: {p!r}"))
         elif ".." in p.split("/") or not p.startswith(f"{module}/"):
             out.append(Violation("S9", rel, 0, f"assets fuera del módulo: {p!r}"))
+
+    for key in sorted(FORBIDDEN_MANIFEST_KEYS & set(data)):
+        out.append(Violation("P9", rel, 0, key))
 
     ext = data.get("external_dependencies") or {}
     for dep in ext.get("python") or []:
