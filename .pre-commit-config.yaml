@@ -1,0 +1,39 @@
+# Revisiones en su máquina, antes de cada commit: las mismas herramientas y
+# versiones que usa el CI de BMyA. Son una ayuda para ustedes; las revisiones
+# que cuentan las corre BMyA en el PR, con su propia configuración.
+#
+#   pip install pre-commit      (o: pipx install pre-commit)
+#   pre-commit install
+#   pre-commit run --all-files
+#
+# Ver docs/07-trabajar-en-su-maquina.md
+repos:
+  - repo: local
+    hooks:
+      - id: bmya-check
+        name: BMyA · reglas de código (ci/security, ci/policy)
+        entry: python3 tools/bmya_check.py
+        language: system
+        pass_filenames: false
+        always_run: true
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: ["--profile=black"]
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.1
+    hooks:
+      - id: flake8
+        args:
+          - "--isolated"
+          - "--max-line-length=120"
+          - "--extend-ignore=E501,W503,W504"
+          - "--exclude=__manifest__.py"
+          - "--per-file-ignores=__init__.py:F401"
+  - repo: https://github.com/OCA/odoo-pre-commit-hooks
+    rev: v0.2.22
+    hooks:
+      - id: oca-checks-odoo-module
+        args:
+          - "--disable=xml-id-position-first,xml-dangerous-qweb-replace-low-priority"
